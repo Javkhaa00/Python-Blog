@@ -1,0 +1,16 @@
+{% extends "base.j2.html" %} 
+
+{% block body %}
+
+    <form action="/newpost" method="POST">
+        <br>Title<br>
+        <input type="text" name="title"></input>
+        <br>Description<br>
+        <input type="text" name="desc"></input>
+        <br>
+        <br>
+        <input type="submit" value="post"></input>
+        <a style="margin-left: 64px;" href="/" >Home</a>
+    </form>
+
+{% endblock %}

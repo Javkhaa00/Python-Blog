@@ -1,0 +1,19 @@
+{% extends "base.j2.html" %} 
+
+{% block body %}
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href={{ url_for('newpost') }} class="btn btn-link">New Post</a>
+            <a href={{ url_for('signup') }} class="btn btn-link">Sign Up</a>
+            <a href={{ url_for('signin') }} class="btn btn-link">Sign In</a>
+        </section>
+    </header>
+    {% if name %}
+        <br>
+        <h4 style="margin-left: 8px;" >You are logged in as {{ name }} </h4>
+        <br>
+    {% endif %}
+    {% for item in items %}
+            <a href={{ url_for('post', post_id = item.id ) }}>{{ item.title }}</a><br>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.j2.html" %} 
+
+{% block body %}
+    <div class="hero bg-gray">
+        <div class="hero-body">
+            <form style="width: 20%;" action="/signin" method="POST">
+                <label class="form-label">Name</label>
+                <input class="form-input" type="text" name="name" placeholder="Name">
+                <label class="form-label">Password</label>
+                <input class="form-input" type="text" name="password" placeholder="Password">
+                <br>
+                <button style="margin-left: 40%;" class="btn btn-primary">Sign In</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
